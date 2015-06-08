@@ -27,3 +27,12 @@ deleteUntaggedImages(){
 alias containers=dockerContainers
 alias images=dockerImages
 alias images-delete-untagged=deleteUntaggedImages
+
+
+#=======================
+# GIT COMMANDS
+#======================
+alias gst="git status"
+alias gc="git commit"
+alias gp="git pull"
+alias gpr="git pull --rebase"
