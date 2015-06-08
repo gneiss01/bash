@@ -1,5 +1,3 @@
-alias filo='echo gwapo'
-
 #=======================
 # DOCKER COMMANDS
 #======================
@@ -22,6 +20,10 @@ dockerImages(){
   sudo docker images $1
 }
 
+deleteUntaggedImages(){
+  sudo docker rmi $(sudo docker images | grep "^<none>" | awk "{print $3}")
+}
+
 alias containers=dockerContainers
 alias images=dockerImages
-
+alias images-delete-untagged=deleteUntaggedImages
